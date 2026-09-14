@@ -661,14 +661,11 @@ a {
 
         margin-top: 30px;
 
-        padding:
-            4px 14px 12px
-            calc((100vw - 28px) / 2 - 78px);
+        padding: 4px 14px 12px;
 
         overflow-x: auto;
         overflow-y: hidden;
 
-        scroll-padding-inline: 14px;
         scroll-snap-type: x mandatory;
         scroll-behavior: smooth;
 
@@ -682,6 +679,7 @@ a {
 
     .brand-card {
         flex: 0 0 156px;
+
         width: 156px;
         min-height: 100px;
 
@@ -689,7 +687,7 @@ a {
 
         border-radius: 16px;
 
-        scroll-snap-align: center;
+        scroll-snap-align: start;
         scroll-snap-stop: always;
     }
 
@@ -697,8 +695,8 @@ a {
         max-width: 125px;
 
         font-size: 14px;
-        letter-spacing: 0.08em;
         line-height: 1.2;
+        letter-spacing: 0.08em;
     }
 
 
@@ -725,10 +723,10 @@ a {
         background: rgba(255, 255, 255, 0.22);
 
         transition:
-            width 0.3s ease,
-            flex-basis 0.3s ease,
-            background 0.3s ease,
-            transform 0.3s ease;
+            width 0.35s ease,
+            flex-basis 0.35s ease,
+            background 0.35s ease,
+            transform 0.35s ease;
     }
 
     .dot.active {
