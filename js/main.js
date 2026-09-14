@@ -4,10 +4,11 @@ document.addEventListener("DOMContentLoaded", () => {
     try {
         resetScrollOnLoad();
 
-        initLoaderClock();
-        initPageLoader();
-        initMobileMenu();
-        initBrandSlider();
+     initLoaderClock();
+     initPageLoader();
+     initMobileMenu();
+     initBrandSlider();
+     initScrollReveal();
     } catch (error) {
         console.error(
             "Site initialization error:",
