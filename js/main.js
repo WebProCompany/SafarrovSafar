@@ -14,6 +14,28 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 });
 
+/* =========================================
+   RESET SCROLL ON PAGE LOAD
+========================================= */
+
+function resetScrollOnLoad() {
+    try {
+        if ("scrollRestoration" in history) {
+            history.scrollRestoration = "manual";
+        }
+
+        window.scrollTo({
+            top: 0,
+            left: 0,
+            behavior: "instant"
+        });
+    } catch (error) {
+        console.error(
+            "Scroll reset error:",
+            error
+        );
+    }
+}
 
 /* =========================================
    PAGE LOADER
