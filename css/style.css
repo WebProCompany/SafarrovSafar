@@ -656,35 +656,61 @@ a {
     }
 
     .brands-track {
+        display: flex;
         gap: 12px;
+
         margin-top: 30px;
+
         padding:
             4px 14px 12px
             calc((100vw - 28px) / 2 - 78px);
+
         overflow-x: auto;
         overflow-y: hidden;
+
         scroll-padding-inline: 14px;
         scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+
         -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+    }
+
+    .brands-track::-webkit-scrollbar {
+        display: none;
     }
 
     .brand-card {
         flex: 0 0 156px;
         width: 156px;
         min-height: 100px;
+
         padding: 16px 12px;
+
         border-radius: 16px;
+
         scroll-snap-align: center;
         scroll-snap-stop: always;
     }
 
     .brand-name {
         max-width: 125px;
+
         font-size: 14px;
         letter-spacing: 0.08em;
+        line-height: 1.2;
     }
 
+
+    /* =====================================
+       MOBILE SLIDER DOTS
+    ====================================== */
+
     .slider-dots {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
         gap: 6px;
         margin-top: 16px;
     }
@@ -692,9 +718,27 @@ a {
     .dot {
         width: 5px;
         height: 5px;
+        flex: 0 0 5px;
+
+        border-radius: 50%;
+
+        background: rgba(255, 255, 255, 0.22);
+
+        transition:
+            width 0.3s ease,
+            flex-basis 0.3s ease,
+            background 0.3s ease,
+            transform 0.3s ease;
     }
 
     .dot.active {
         width: 20px;
+        flex-basis: 20px;
+
+        border-radius: 10px;
+
+        background: #c7aa72;
+
+        transform: scaleY(1.1);
     }
 }
