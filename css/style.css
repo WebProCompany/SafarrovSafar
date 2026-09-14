@@ -639,3 +639,62 @@ a {
         gap: 5px;
     }
 }
+
+/* =========================================
+   PREMIUM MOBILE BRAND SLIDER
+========================================= */
+
+@media (max-width: 600px) {
+
+    .brands-section {
+        padding: 78px 0 72px;
+        overflow: hidden;
+    }
+
+    .brands-section .section-heading {
+        padding: 0 2px;
+    }
+
+    .brands-track {
+        gap: 12px;
+        margin-top: 30px;
+        padding:
+            4px 14px 12px
+            calc((100vw - 28px) / 2 - 78px);
+        overflow-x: auto;
+        overflow-y: hidden;
+        scroll-padding-inline: 14px;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .brand-card {
+        flex: 0 0 156px;
+        width: 156px;
+        min-height: 100px;
+        padding: 16px 12px;
+        border-radius: 16px;
+        scroll-snap-align: center;
+        scroll-snap-stop: always;
+    }
+
+    .brand-name {
+        max-width: 125px;
+        font-size: 14px;
+        letter-spacing: 0.08em;
+    }
+
+    .slider-dots {
+        gap: 6px;
+        margin-top: 16px;
+    }
+
+    .dot {
+        width: 5px;
+        height: 5px;
+    }
+
+    .dot.active {
+        width: 20px;
+    }
+}
