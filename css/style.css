@@ -443,16 +443,18 @@ a {
     height: 5px;
     border-radius: 50%;
     background: rgba(255, 255, 255, 0.22);
+
     transition:
-        width 0.3s ease,
-        border-radius 0.3s ease,
-        background 0.3s ease;
+        width 0.35s ease,
+        transform 0.35s ease,
+        background 0.35s ease;
 }
 
 .dot.active {
     width: 18px;
     border-radius: 10px;
     background: #c7aa72;
+    transform: scaleY(1.15);
 }
 
 /* =========================================
