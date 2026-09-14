@@ -2,6 +2,8 @@
 
 document.addEventListener("DOMContentLoaded", () => {
     try {
+        resetScrollOnLoad();
+
         initLoaderClock();
         initPageLoader();
         initMobileMenu();
