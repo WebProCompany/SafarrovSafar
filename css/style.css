@@ -357,20 +357,19 @@ a {
     color: #0b0b0b;
 }
 
-
 /* =========================================
-   BRANDS
+   BRANDS SLIDER
 ========================================= */
 
-.brands-section {
-    padding: 110px 0;
-    background: #0d0d0d;
+.brands-slider {
+    width: 100%;
 }
 
 .brands-track {
     display: flex;
-    gap: 16px;
+    gap: 14px;
     margin-top: 45px;
+    padding: 4px 2px 10px;
     overflow-x: auto;
     overscroll-behavior-inline: contain;
     scroll-snap-type: x mandatory;
@@ -382,37 +381,79 @@ a {
 }
 
 .brand-card {
-    flex: 0 0 200px;
-    min-height: 120px;
+    flex: 0 0 168px;
+    min-height: 108px;
     display: flex;
     align-items: center;
     justify-content: center;
     scroll-snap-align: start;
+
+    padding: 18px;
     border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 14px;
+
     background:
         linear-gradient(
             145deg,
             rgba(255, 255, 255, 0.045),
-            rgba(255, 255, 255, 0.01)
+            rgba(255, 255, 255, 0.012)
         );
+
     transition:
         border-color 0.35s ease,
-        transform 0.35s ease;
+        transform 0.35s ease,
+        background 0.35s ease;
 }
 
 .brand-card:hover {
     border-color: rgba(199, 170, 114, 0.55);
-    transform: translateY(-4px);
+    background:
+        linear-gradient(
+            145deg,
+            rgba(199, 170, 114, 0.08),
+            rgba(255, 255, 255, 0.015)
+        );
+    transform: translateY(-3px);
 }
 
 .brand-name {
     color: #d7d2c8;
     font-family: "Playfair Display", serif;
-    font-size: 18px;
-    letter-spacing: 0.1em;
+    font-size: 16px;
+    letter-spacing: 0.09em;
+    line-height: 1.2;
     text-align: center;
 }
 
+
+/* =========================================
+   SLIDER DOTS
+========================================= */
+
+.slider-dots {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    margin-top: 20px;
+}
+
+.dot {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.22);
+    transition:
+        width 0.3s ease,
+        border-radius 0.3s ease,
+        background 0.3s ease;
+}
+
+.dot.active {
+    width: 18px;
+    border-radius: 10px;
+    background: #c7aa72;
+}
 
 /* =========================================
    WATCHES
