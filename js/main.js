@@ -2,49 +2,77 @@
 
 document.addEventListener("DOMContentLoaded", () => {
     try {
-        /* =========================================
-           MOBILE MENU
-        ========================================== */
+       /* =========================================
+   MOBILE BRAND SLIDER + ACTIVE DOTS
+========================================= */
 
-        const menuToggle = document.getElementById("menuToggle");
-        const mobileMenu = document.getElementById("mobileMenu");
+const brandsTrack = document.querySelector(".brands-track");
+const brandCards = document.querySelectorAll(".brand-card");
+const dots = document.querySelectorAll(".slider-dots .dot");
 
-        if (menuToggle && mobileMenu) {
-            const mobileLinks = mobileMenu.querySelectorAll("a");
+if (
+    brandsTrack &&
+    brandCards.length &&
+    dots.length &&
+    window.matchMedia("(max-width: 600px)").matches
+) {
+    try {
+        const observer = new IntersectionObserver(
+            (entries) => {
+                let bestEntry = null;
 
-            const closeMenu = () => {
-                menuToggle.classList.remove("active");
-                menuToggle.setAttribute("aria-expanded", "false");
-                mobileMenu.classList.remove("active");
-            };
+                entries.forEach((entry) => {
+                    if (
+                        entry.isIntersecting &&
+                        (!bestEntry ||
+                            entry.intersectionRatio >
+                                bestEntry.intersectionRatio)
+                    ) {
+                        bestEntry = entry;
+                    }
+                });
 
-            menuToggle.addEventListener("click", () => {
-                const isOpen = mobileMenu.classList.toggle("active");
-
-                menuToggle.classList.toggle("active", isOpen);
-                menuToggle.setAttribute(
-                    "aria-expanded",
-                    String(isOpen)
-                );
-            });
-
-            mobileLinks.forEach((link) => {
-                link.addEventListener("click", closeMenu);
-            });
-
-            document.addEventListener("keydown", (event) => {
-                if (event.key === "Escape") {
-                    closeMenu();
+                if (!bestEntry) {
+                    return;
                 }
-            });
 
-            window.addEventListener("resize", () => {
-                if (window.innerWidth > 900) {
-                    closeMenu();
+                const activeIndex = Array.from(
+                    brandCards
+                ).indexOf(bestEntry.target);
+
+                if (activeIndex === -1) {
+                    return;
                 }
-            });
-        }
 
+                dots.forEach((dot, index) => {
+                    dot.classList.toggle(
+                        "active",
+                        index === activeIndex
+                    );
+                });
+            },
+            {
+                root: brandsTrack,
+                threshold: [
+                    0.35,
+                    0.5,
+                    0.65,
+                    0.8,
+                    0.95
+                ]
+            }
+        );
+
+        brandCards.forEach((card) => {
+            observer.observe(card);
+        });
+    } catch (error) {
+        console.error(
+            "Mobile slider error:",
+            error
+        );
+    }
+}
 
         /* =========================================
            BRANDS SLIDER + MOVING DOTS
