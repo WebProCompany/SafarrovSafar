@@ -1,1 +1,298 @@
+<!DOCTYPE html>
+<html lang="tg">
+<head>
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
+    <meta
+        name="description"
+        content="Премиум интернет-магазини соатҳои мардона ва занона."
+    >
+
+    <title>WATCH STORE — Premium Watches</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- =========================================
+         HEADER
+    ========================================== -->
+
+    <header class="site-header">
+        <div class="container header-inner">
+
+            <a href="#" class="logo" aria-label="Watch Store">
+                WATCH<span>.</span>
+            </a>
+
+            <nav class="main-nav" aria-label="Основная навигация">
+                <a href="#home">Главная</a>
+                <a href="#brands">Бренды</a>
+                <a href="#watches">Часы</a>
+                <a href="#about">О нас</a>
+                <a href="#contact">Контакты</a>
+            </nav>
+
+            <div class="header-actions">
+
+                <button
+                    class="icon-button"
+                    type="button"
+                    aria-label="Поиск"
+                    id="searchButton"
+                >
+                    <svg
+                        viewBox="0 0 24 24"
+                        aria-hidden="true"
+                    >
+                        <circle cx="11" cy="11" r="6.5"></circle>
+                        <path d="M16 16L21 21"></path>
+                    </svg>
+                </button>
+
+                <button
+                    class="icon-button cart-button"
+                    type="button"
+                    aria-label="Корзина"
+                    id="cartButton"
+                >
+                    <svg
+                        viewBox="0 0 24 24"
+                        aria-hidden="true"
+                    >
+                        <path d="M4 5H6L8.2 15H18L20 8H7"></path>
+                        <circle cx="9.5" cy="19" r="1.3"></circle>
+                        <circle cx="17" cy="19" r="1.3"></circle>
+                    </svg>
+
+                    <span class="cart-count">0</span>
+                </button>
+
+                <button
+                    class="menu-toggle"
+                    type="button"
+                    aria-label="Открыть меню"
+                    aria-expanded="false"
+                    id="menuToggle"
+                >
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+            </div>
+
+        </div>
+    </header>
+
+
+    <!-- =========================================
+         MOBILE MENU
+    ========================================== -->
+
+    <div class="mobile-menu" id="mobileMenu">
+        <nav aria-label="Мобильная навигация">
+            <a href="#home">Главная</a>
+            <a href="#brands">Бренды</a>
+            <a href="#watches">Часы</a>
+            <a href="#about">О нас</a>
+            <a href="#contact">Контакты</a>
+        </nav>
+    </div>
+
+
+    <!-- =========================================
+         MAIN
+    ========================================== -->
+
+    <main id="home">
+
+        <section class="hero">
+            <div class="container hero-content">
+
+                <p class="hero-label">TIMELESS ELEGANCE</p>
+
+                <h1>
+                    Время имеет<br>
+                    свой стиль.
+                </h1>
+
+                <p class="hero-description">
+                    Коллекция премиальных часов
+                    для тех, кто ценит точность,
+                    стиль и характер.
+                </p>
+
+                <a href="#watches" class="hero-button">
+                    Смотреть коллекцию
+                </a>
+
+            </div>
+        </section>
+
+
+        <!-- =====================================
+             BRANDS
+        ====================================== -->
+
+        <section class="brands-section" id="brands">
+            <div class="container">
+
+                <div class="section-heading">
+                    <p class="section-label">BRANDS</p>
+
+                    <h2>
+                        Выберите свой бренд
+                    </h2>
+                </div>
+
+                <div class="brands-track">
+
+                    <a href="#" class="brand-card">
+                        <span class="brand-name">ROLEX</span>
+                    </a>
+
+                    <a href="#" class="brand-card">
+                        <span class="brand-name">R•WARD</span>
+                    </a>
+
+                    <a href="#" class="brand-card">
+                        <span class="brand-name">HUBLOT</span>
+                    </a>
+
+                    <a href="#" class="brand-card">
+                        <span class="brand-name">TISSOT</span>
+                    </a>
+
+                    <a href="#" class="brand-card">
+                        <span class="brand-name">CARTIER</span>
+                    </a>
+
+                    <a href="#" class="brand-card">
+                        <span class="brand-name">OMEGA</span>
+                    </a>
+
+                    <a href="#" class="brand-card">
+                        <span class="brand-name">PATEK PHILIPPE</span>
+                    </a>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- =====================================
+             WATCHES PLACEHOLDER
+        ====================================== -->
+
+        <section class="watches-section" id="watches">
+
+            <div class="container">
+
+                <div class="section-heading">
+                    <p class="section-label">COLLECTION</p>
+
+                    <h2>
+                        Премиальные часы
+                    </h2>
+
+                    <p class="section-description">
+                        Здесь будет наша основная коллекция
+                        часов с фотографиями, ценами
+                        и информацией о каждом изделии.
+                    </p>
+                </div>
+
+                <div class="empty-collection">
+                    <span>COMING SOON</span>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             ABOUT
+        ====================================== -->
+
+        <section class="about-section" id="about">
+            <div class="container">
+
+                <div class="section-heading">
+                    <p class="section-label">ABOUT</p>
+
+                    <h2>
+                        Искусство измерять время
+                    </h2>
+
+                    <p class="section-description">
+                        Мы создаём пространство, где
+                        премиальные часы сочетаются
+                        с современным дизайном и
+                        высоким качеством сервиса.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- =====================================
+             CONTACT
+        ====================================== -->
+
+        <section class="contact-section" id="contact">
+            <div class="container">
+
+                <div class="section-heading">
+                    <p class="section-label">CONTACT</p>
+
+                    <h2>
+                        Свяжитесь с нами
+                    </h2>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+
+    <!-- =========================================
+         FOOTER
+    ========================================== -->
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+
+            <p>
+                © 2026 WATCH STORE
+            </p>
+
+            <p>
+                Premium Timepieces
+            </p>
+
+        </div>
+    </footer>
+
+
+    <script src="js/main.js"></script>
+
+</body>
+</html>
