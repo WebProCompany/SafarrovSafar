@@ -1115,3 +1115,89 @@ a {
             rotate(360deg);
     }
 }
+
+/* =========================================
+   PREMIUM LOADER ORBIT DOTS
+========================================= */
+
+.loader-orbit {
+    position: absolute;
+
+    inset: -18px;
+
+    border-radius: 50%;
+
+    pointer-events: none;
+}
+
+.orbit-dot {
+    position: absolute;
+
+    width: 4px;
+    height: 4px;
+
+    border-radius: 50%;
+
+    background: rgba(199, 170, 114, 0.18);
+
+    box-shadow:
+        0 0 0 rgba(199, 170, 114, 0);
+
+    transition:
+        background 0.25s ease,
+        box-shadow 0.25s ease,
+        transform 0.25s ease;
+}
+
+.orbit-dot.dot-1 {
+    top: 50%;
+    right: 0;
+
+    transform: translateY(-50%);
+}
+
+.orbit-dot.dot-2 {
+    right: 50%;
+    bottom: 0;
+
+    transform: translateX(50%);
+}
+
+.orbit-dot.dot-3 {
+    bottom: 50%;
+    left: 0;
+
+    transform: translateY(50%);
+}
+
+.orbit-dot.dot-4 {
+    top: 0;
+    left: 50%;
+
+    transform: translateX(-50%);
+}
+
+.orbit-dot.active {
+    background: #c7aa72;
+
+    box-shadow:
+        0 0 8px rgba(199, 170, 114, 0.65),
+        0 0 16px rgba(199, 170, 114, 0.22);
+
+    transform:
+        translate(-50%, -50%)
+        scale(1.35);
+}
+
+
+/* =========================================
+   REAL CLOCK HANDS
+========================================= */
+
+.loader-hand {
+    transition: transform 0.2s ease-out;
+}
+
+.loader-second {
+    transition: transform 0.08s linear;
+}
