@@ -2,6 +2,7 @@
 <html lang="tg">
 <head>
     <meta charset="UTF-8">
+
     <meta
         name="viewport"
         content="width=device-width, initial-scale=1.0"
@@ -34,11 +35,11 @@
     <header class="site-header">
         <div class="container header-inner">
 
-            <a href="#" class="logo" aria-label="Watch Store">
+            <a href="#home" class="logo">
                 WATCH<span>.</span>
             </a>
 
-            <nav class="main-nav" aria-label="Основная навигация">
+            <nav class="main-nav">
                 <a href="#home">Главная</a>
                 <a href="#brands">Бренды</a>
                 <a href="#watches">Часы</a>
@@ -52,12 +53,8 @@
                     class="icon-button"
                     type="button"
                     aria-label="Поиск"
-                    id="searchButton"
                 >
-                    <svg
-                        viewBox="0 0 24 24"
-                        aria-hidden="true"
-                    >
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
                         <circle cx="11" cy="11" r="6.5"></circle>
                         <path d="M16 16L21 21"></path>
                     </svg>
@@ -67,12 +64,8 @@
                     class="icon-button cart-button"
                     type="button"
                     aria-label="Корзина"
-                    id="cartButton"
                 >
-                    <svg
-                        viewBox="0 0 24 24"
-                        aria-hidden="true"
-                    >
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
                         <path d="M4 5H6L8.2 15H18L20 8H7"></path>
                         <circle cx="9.5" cy="19" r="1.3"></circle>
                         <circle cx="17" cy="19" r="1.3"></circle>
@@ -83,10 +76,10 @@
 
                 <button
                     class="menu-toggle"
+                    id="menuToggle"
                     type="button"
                     aria-label="Открыть меню"
                     aria-expanded="false"
-                    id="menuToggle"
                 >
                     <span></span>
                     <span></span>
@@ -94,7 +87,6 @@
                 </button>
 
             </div>
-
         </div>
     </header>
 
@@ -104,7 +96,7 @@
     ========================================== -->
 
     <div class="mobile-menu" id="mobileMenu">
-        <nav aria-label="Мобильная навигация">
+        <nav>
             <a href="#home">Главная</a>
             <a href="#brands">Бренды</a>
             <a href="#watches">Часы</a>
@@ -118,12 +110,16 @@
          MAIN
     ========================================== -->
 
-    <main id="home">
+    <main>
 
-        <section class="hero">
+        <!-- HERO -->
+
+        <section class="hero" id="home">
             <div class="container hero-content">
 
-                <p class="hero-label">TIMELESS ELEGANCE</p>
+                <p class="hero-label">
+                    TIMELESS ELEGANCE
+                </p>
 
                 <h1>
                     Время имеет<br>
@@ -136,7 +132,10 @@
                     стиль и характер.
                 </p>
 
-                <a href="#watches" class="hero-button">
+                <a
+                    href="#watches"
+                    class="hero-button"
+                >
                     Смотреть коллекцию
                 </a>
 
@@ -144,77 +143,106 @@
         </section>
 
 
-        <!-- =====================================
-             BRANDS
-        ====================================== -->
+        <!-- BRANDS -->
 
-        <section class="brands-section" id="brands">
+        <section
+            class="brands-section"
+            id="brands"
+        >
             <div class="container">
 
                 <div class="section-heading">
-                    <p class="section-label">BRANDS</p>
+                    <p class="section-label">
+                        BRANDS
+                    </p>
 
                     <h2>
                         Выберите свой бренд
                     </h2>
                 </div>
 
-             <div class="brands-slider">
+                <div class="brands-slider">
 
-    <div class="brands-track">
+                    <div
+                        class="brands-track"
+                        id="brandsTrack"
+                    >
 
-        <a href="#" class="brand-card">
-            <span class="brand-name">ROLEX</span>
-        </a>
+                        <a href="#" class="brand-card">
+                            <span class="brand-name">
+                                ROLEX
+                            </span>
+                        </a>
 
-        <a href="#" class="brand-card">
-            <span class="brand-name">R•WARD</span>
-        </a>
+                        <a href="#" class="brand-card">
+                            <span class="brand-name">
+                                R•WARD
+                            </span>
+                        </a>
 
-        <a href="#" class="brand-card">
-            <span class="brand-name">HUBLOT</span>
-        </a>
+                        <a href="#" class="brand-card">
+                            <span class="brand-name">
+                                HUBLOT
+                            </span>
+                        </a>
 
-        <a href="#" class="brand-card">
-            <span class="brand-name">TISSOT</span>
-        </a>
+                        <a href="#" class="brand-card">
+                            <span class="brand-name">
+                                TISSOT
+                            </span>
+                        </a>
 
-        <a href="#" class="brand-card">
-            <span class="brand-name">CARTIER</span>
-        </a>
+                        <a href="#" class="brand-card">
+                            <span class="brand-name">
+                                CARTIER
+                            </span>
+                        </a>
 
-        <a href="#" class="brand-card">
-            <span class="brand-name">OMEGA</span>
-        </a>
+                        <a href="#" class="brand-card">
+                            <span class="brand-name">
+                                OMEGA
+                            </span>
+                        </a>
 
-        <a href="#" class="brand-card">
-            <span class="brand-name">PATEK PHILIPPE</span>
-        </a>
+                        <a href="#" class="brand-card">
+                            <span class="brand-name">
+                                PATEK PHILIPPE
+                            </span>
+                        </a>
 
-    </div>
+                    </div>
 
-    <div class="slider-dots" aria-hidden="true">
-        <span class="dot active"></span>
-        <span class="dot"></span>
-        <span class="dot"></span>
-        <span class="dot"></span>
-        <span class="dot"></span>
-    </div>
+                    <div
+                        class="slider-dots"
+                        id="sliderDots"
+                        aria-hidden="true"
+                    >
+                        <span class="dot active"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
 
-</div>
+                </div>
+            </div>
         </section>
 
 
-        <!-- =====================================
-             WATCHES PLACEHOLDER
-        ====================================== -->
+        <!-- WATCHES -->
 
-        <section class="watches-section" id="watches">
-
+        <section
+            class="watches-section"
+            id="watches"
+        >
             <div class="container">
 
                 <div class="section-heading">
-                    <p class="section-label">COLLECTION</p>
+                    <p class="section-label">
+                        COLLECTION
+                    </p>
 
                     <h2>
                         Премиальные часы
@@ -228,23 +256,28 @@
                 </div>
 
                 <div class="empty-collection">
-                    <span>COMING SOON</span>
+                    <span>
+                        COMING SOON
+                    </span>
                 </div>
 
             </div>
-
         </section>
 
 
-        <!-- =====================================
-             ABOUT
-        ====================================== -->
+        <!-- ABOUT -->
 
-        <section class="about-section" id="about">
+        <section
+            class="about-section"
+            id="about"
+        >
             <div class="container">
 
                 <div class="section-heading">
-                    <p class="section-label">ABOUT</p>
+
+                    <p class="section-label">
+                        ABOUT
+                    </p>
 
                     <h2>
                         Искусство измерять время
@@ -256,25 +289,31 @@
                         с современным дизайном и
                         высоким качеством сервиса.
                     </p>
+
                 </div>
 
             </div>
         </section>
 
 
-        <!-- =====================================
-             CONTACT
-        ====================================== -->
+        <!-- CONTACT -->
 
-        <section class="contact-section" id="contact">
+        <section
+            class="contact-section"
+            id="contact"
+        >
             <div class="container">
 
                 <div class="section-heading">
-                    <p class="section-label">CONTACT</p>
+
+                    <p class="section-label">
+                        CONTACT
+                    </p>
 
                     <h2>
                         Свяжитесь с нами
                     </h2>
+
                 </div>
 
             </div>
@@ -283,9 +322,7 @@
     </main>
 
 
-    <!-- =========================================
-         FOOTER
-    ========================================== -->
+    <!-- FOOTER -->
 
     <footer class="site-footer">
         <div class="container footer-inner">
