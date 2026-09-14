@@ -2,6 +2,8 @@
 
 document.addEventListener("DOMContentLoaded", () => {
     try {
+        initLoaderClock();
+        initPageLoader();
         initMobileMenu();
         initBrandSlider();
     } catch (error) {
@@ -11,6 +13,143 @@ document.addEventListener("DOMContentLoaded", () => {
         );
     }
 });
+
+
+/* =========================================
+   PAGE LOADER
+========================================= */
+
+function initPageLoader() {
+    const loader =
+        document.getElementById("pageLoader");
+
+    if (!loader) {
+        return;
+    }
+
+    const hideLoader = () => {
+        window.setTimeout(() => {
+            loader.classList.add("loaded");
+        }, 2000);
+    };
+
+    if (document.readyState === "complete") {
+        hideLoader();
+    } else {
+        window.addEventListener(
+            "load",
+            hideLoader,
+            { once: true }
+        );
+    }
+}
+
+
+/* =========================================
+   REAL LOADER CLOCK
+========================================= */
+
+function initLoaderClock() {
+    const hourHand =
+        document.querySelector(".loader-hour");
+
+    const minuteHand =
+        document.querySelector(".loader-minute");
+
+    const secondHand =
+        document.querySelector(".loader-second");
+
+    const orbitDots =
+        document.querySelectorAll(".orbit-dot");
+
+    if (
+        !hourHand ||
+        !minuteHand ||
+        !secondHand
+    ) {
+        return;
+    }
+
+    const updateClock = () => {
+        try {
+            const now = new Date();
+
+            const milliseconds =
+                now.getMilliseconds();
+
+            const seconds =
+                now.getSeconds() +
+                milliseconds / 1000;
+
+            const minutes =
+                now.getMinutes() +
+                seconds / 60;
+
+            const hours =
+                (now.getHours() % 12) +
+                minutes / 60;
+
+
+            /* ==============================
+               REAL CLOCK ROTATION
+            ============================== */
+
+            const secondRotation =
+                seconds * 6;
+
+            const minuteRotation =
+                minutes * 6;
+
+            const hourRotation =
+                hours * 30;
+
+
+            hourHand.style.transform =
+                `translateX(-50%) rotate(${hourRotation}deg)`;
+
+            minuteHand.style.transform =
+                `translateX(-50%) rotate(${minuteRotation}deg)`;
+
+            secondHand.style.transform =
+                `translateX(-50%) rotate(${secondRotation}deg)`;
+
+
+            /* ==============================
+               ORBIT DOTS
+            ============================== */
+
+            if (orbitDots.length === 4) {
+                const activeDot =
+                    Math.floor(
+                        now.getSeconds() / 15
+                    );
+
+                orbitDots.forEach(
+                    (dot, index) => {
+                        dot.classList.toggle(
+                            "active",
+                            index === activeDot
+                        );
+                    }
+                );
+            }
+
+        } catch (error) {
+            console.error(
+                "Loader clock error:",
+                error
+            );
+        }
+    };
+
+
+    updateClock();
+
+    window.setInterval(
+        updateClock,
+        100
+    );
+}
 
 
 /* =========================================
@@ -54,22 +193,28 @@ function initMobileMenu() {
     };
 
 
-    menuToggle.addEventListener("click", () => {
-        const isOpen =
-            mobileMenu.classList.contains("active");
+    menuToggle.addEventListener(
+        "click",
+        () => {
+            const isOpen =
+                mobileMenu.classList.contains(
+                    "active"
+                );
 
-        if (isOpen) {
-            closeMenu();
-        } else {
-            openMenu();
+            if (isOpen) {
+                closeMenu();
+            } else {
+                openMenu();
+            }
         }
-    });
+    );
 
 
     menuLinks.forEach((link) => {
-        link.addEventListener("click", () => {
-            closeMenu();
-        });
+        link.addEventListener(
+            "click",
+            closeMenu
+        );
     });
 
 
@@ -167,6 +312,7 @@ function initBrandSlider() {
                     );
                 }
             );
+
         } catch (error) {
             console.error(
                 "Brand dots error:",
