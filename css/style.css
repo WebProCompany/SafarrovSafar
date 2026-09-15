@@ -4411,3 +4411,145 @@ a {
             );
     }
 }
+/* =========================================
+   MOBILE HERO — TEXT FIRST, WATCH BELOW
+========================================= */
+
+@media (max-width: 600px) {
+
+    .hero {
+        position: relative;
+
+        min-height: 100svh;
+
+        display: flex;
+        flex-direction: column;
+
+        align-items: center;
+        justify-content: flex-start;
+
+        gap: 0;
+
+        padding:
+            96px
+            16px
+            0;
+
+        overflow: hidden;
+
+        text-align: center;
+
+        background: #090909;
+    }
+
+
+    /* TEXT */
+
+    .hero-content {
+        position: relative;
+        z-index: 5;
+
+        width: 100%;
+        max-width: 360px;
+
+        margin: 0 auto;
+
+        flex: 0 0 auto;
+    }
+
+
+    .hero-label {
+        margin-bottom: 14px;
+    }
+
+
+    .hero h1 {
+        max-width: 350px;
+
+        margin: 0 auto;
+    }
+
+
+    .hero-description {
+        max-width: 330px;
+
+        margin:
+            18px auto 0;
+    }
+
+
+    .hero-button {
+        display: inline-flex;
+
+        width: 100%;
+        max-width: 320px;
+
+        margin:
+            24px auto 0;
+    }
+
+
+    /* =====================================
+       WATCH IMAGE
+    ====================================== */
+
+    .hero-rolex {
+        position: relative;
+        z-index: 2;
+
+        width: 100%;
+
+        height: 52svh;
+        min-height: 300px;
+        max-height: 520px;
+
+        margin-top: 8px;
+
+        display: flex;
+
+        align-items: flex-start;
+        justify-content: center;
+
+        overflow: hidden;
+    }
+
+
+    .hero-rolex-picture {
+        position: absolute;
+
+        top: 0;
+        left: 0;
+
+        width: 100%;
+        height: 100%;
+
+        display: block;
+    }
+
+
+    .hero-rolex-image {
+        display: block;
+
+        width: 100%;
+        height: 100%;
+
+        max-width: none;
+        max-height: none;
+
+        object-fit: cover;
+
+        object-position: center center;
+
+        transform: none;
+    }
+
+
+    /* remove old background-style overlay */
+    .hero-rolex::before {
+        display: none;
+    }
+
+    .hero-rolex::after {
+        display: none;
+    }
+}
