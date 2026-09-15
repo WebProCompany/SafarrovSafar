@@ -4553,3 +4553,15 @@ a {
         display: none;
     }
 }
+
+/* =========================================
+   HERO — DESKTOP IMAGE SLIGHTLY UP
+========================================= */
+
+@media (min-width: 901px) {
+
+    .hero-rolex-image {
+        transform: translateY(-45px);
+    }
+
+}
