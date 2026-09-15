@@ -3875,3 +3875,332 @@ a {
         height: auto;
     }
 }
+/* =========================================
+   FULLSCREEN HERO IMAGE
+========================================= */
+
+@media (min-width: 901px) {
+
+    .hero {
+        position: relative;
+
+        min-height: 100svh;
+        width: 100%;
+
+        display: flex;
+        align-items: center;
+
+        padding:
+            120px
+            6vw
+            80px;
+
+        overflow: hidden;
+
+        background: #090909;
+    }
+
+
+    /* Hide the old image layout */
+    .hero-rolex {
+        position: absolute;
+        inset: 0;
+
+        width: 100%;
+        min-height: 100%;
+
+        display: block;
+
+        z-index: 1;
+
+        overflow: hidden;
+    }
+
+    .hero-rolex-picture {
+        position: absolute;
+        inset: 0;
+
+        display: block;
+
+        width: 100%;
+        height: 100%;
+    }
+
+    .hero-rolex-image {
+        display: block;
+
+        width: 100%;
+        height: 100%;
+
+        max-height: none;
+
+        object-fit: cover;
+
+        object-position: center center;
+
+        animation:
+            hero-image-reveal
+            1.2s
+            cubic-bezier(0.22, 1, 0.36, 1)
+            both;
+
+        filter:
+            saturate(0.95)
+            contrast(1.03);
+    }
+
+
+    /* Dark cinematic overlay */
+
+    .hero-rolex::after {
+        position: absolute;
+        inset: 0;
+
+        content: "";
+
+        background:
+            linear-gradient(
+                90deg,
+                rgba(5, 5, 5, 0.92) 0%,
+                rgba(5, 5, 5, 0.72) 24%,
+                rgba(5, 5, 5, 0.35) 52%,
+                rgba(5, 5, 5, 0.08) 100%
+            );
+
+        z-index: 2;
+
+        pointer-events: none;
+    }
+
+
+    /* Remove old glow */
+
+    .hero-rolex::before {
+        display: none;
+    }
+
+
+    /* Text above image */
+
+    .hero-content {
+        position: relative;
+        z-index: 5;
+
+        width: min(620px, 46vw);
+
+        max-width: 620px;
+
+        margin-left: 0;
+        margin-right: auto;
+
+        padding-left: 1vw;
+
+        text-align: left;
+
+        animation:
+            hero-content-final
+            1s
+            cubic-bezier(0.22, 1, 0.36, 1)
+            0.2s
+            both;
+    }
+
+
+    .hero-label,
+    .hero h1,
+    .hero-description,
+    .hero-button {
+        position: relative;
+        z-index: 6;
+    }
+}
+
+
+/* =========================================
+   DESKTOP IMAGE REVEAL
+========================================= */
+
+@keyframes hero-image-reveal {
+
+    from {
+        opacity: 0;
+
+        transform:
+            scale(1.04);
+
+        filter:
+            blur(8px)
+            saturate(0.8);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            scale(1);
+
+        filter:
+            blur(0)
+            saturate(0.95);
+    }
+}
+
+
+@keyframes hero-content-final {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(24px);
+
+        filter: blur(6px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0);
+
+        filter: blur(0);
+    }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .hero {
+        position: relative;
+
+        min-height: 100svh;
+
+        display: flex;
+        flex-direction: column;
+
+        justify-content: flex-start;
+        align-items: center;
+
+        padding:
+            94px
+            16px
+            30px;
+
+        overflow: hidden;
+
+        background: #090909;
+
+        text-align: center;
+    }
+
+
+    .hero-rolex {
+        position: absolute;
+        inset: 0;
+
+        width: 100%;
+        height: 100%;
+
+        min-height: 100%;
+
+        z-index: 1;
+
+        display: block;
+
+        overflow: hidden;
+    }
+
+
+    .hero-rolex-picture {
+        position: absolute;
+        inset: 0;
+
+        width: 100%;
+        height: 100%;
+    }
+
+
+    .hero-rolex-image {
+        width: 100%;
+        height: 100%;
+
+        max-height: none;
+
+        object-fit: cover;
+
+        object-position: center center;
+    }
+
+
+    .hero-rolex::after {
+        position: absolute;
+        inset: 0;
+
+        content: "";
+
+        background:
+            linear-gradient(
+                180deg,
+                rgba(5, 5, 5, 0.88) 0%,
+                rgba(5, 5, 5, 0.58) 28%,
+                rgba(5, 5, 5, 0.20) 58%,
+                rgba(5, 5, 5, 0.60) 100%
+            );
+
+        z-index: 2;
+
+        pointer-events: none;
+    }
+
+
+    .hero-rolex::before {
+        display: none;
+    }
+
+
+    .hero-content {
+        position: relative;
+        z-index: 5;
+
+        width: 100%;
+        max-width: 360px;
+
+        margin: 0 auto;
+
+        padding: 0;
+
+        text-align: center;
+    }
+
+
+    .hero-label {
+        margin-bottom: 14px;
+    }
+
+
+    .hero h1 {
+        margin: 0 auto;
+
+        max-width: 350px;
+    }
+
+
+    .hero-description {
+        margin:
+            18px auto 0;
+
+        max-width: 330px;
+    }
+
+
+    .hero-button {
+        margin-top: 24px;
+
+        width: 100%;
+        max-width: 320px;
+    }
+}
