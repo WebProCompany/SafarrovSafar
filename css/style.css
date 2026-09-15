@@ -3236,3 +3236,535 @@ a {
         height: 300px;
     }
 }
+
+/* =========================================
+   HERO — REAL ROLEX IMAGE
+========================================= */
+
+.hero {
+    position: relative;
+
+    min-height: 100svh;
+
+    display: grid;
+    grid-template-columns: minmax(0, 0.85fr) minmax(420px, 1.15fr);
+
+    align-items: center;
+
+    gap: 30px;
+
+    padding: 110px 6vw 60px;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 72% 48%,
+            rgba(199, 170, 114, 0.10),
+            transparent 32%
+        ),
+        linear-gradient(
+            120deg,
+            #080808 0%,
+            #10100f 52%,
+            #080808 100%
+        );
+}
+
+.hero::before {
+    position: absolute;
+    inset: 0;
+
+    content: "";
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(8, 8, 8, 0.98) 0%,
+            rgba(8, 8, 8, 0.82) 38%,
+            rgba(8, 8, 8, 0.20) 72%,
+            rgba(8, 8, 8, 0.08) 100%
+        );
+
+    pointer-events: none;
+}
+
+
+/* =========================================
+   HERO TEXT
+========================================= */
+
+.hero-content {
+    position: relative;
+    z-index: 5;
+
+    width: 100%;
+    max-width: 620px;
+
+    justify-self: start;
+
+    animation:
+        hero-text-reveal
+        1s
+        cubic-bezier(0.22, 1, 0.36, 1)
+        0.45s
+        both;
+}
+
+.hero-label {
+    margin-bottom: 18px;
+
+    color: #c7aa72;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    letter-spacing: 0.32em;
+}
+
+.hero h1 {
+    max-width: 620px;
+
+    color: #f5f2ea;
+
+    font-family: "Playfair Display", serif;
+
+    font-size:
+        clamp(52px, 6.8vw, 94px);
+
+    font-weight: 500;
+
+    line-height: 0.96;
+}
+
+.hero-description {
+    max-width: 470px;
+
+    margin-top: 26px;
+
+    color: #aaa69e;
+
+    font-size: 15px;
+
+    line-height: 1.75;
+}
+
+.hero-button {
+    display: inline-flex;
+
+    min-height: 52px;
+
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 32px;
+    padding: 0 27px;
+
+    border:
+        1px solid #c7aa72;
+
+    color: #f5f2ea;
+
+    font-size: 11px;
+    font-weight: 600;
+
+    letter-spacing: 0.1em;
+
+    text-transform: uppercase;
+
+    transition:
+        background 0.35s ease,
+        color 0.35s ease,
+        transform 0.35s ease;
+}
+
+.hero-button:hover {
+    background: #c7aa72;
+    color: #0b0b0b;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================
+   HERO ROLEX IMAGE
+========================================= */
+
+.hero-rolex {
+    position: relative;
+    z-index: 3;
+
+    width: 100%;
+
+    min-height: 620px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    justify-self: end;
+
+    animation:
+        hero-rolex-reveal
+        1.2s
+        cubic-bezier(0.22, 1, 0.36, 1)
+        0.15s
+        both;
+}
+
+.hero-rolex::before {
+    position: absolute;
+
+    width: min(560px, 90%);
+    aspect-ratio: 1 / 1;
+
+    border-radius: 50%;
+
+    content: "";
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(199, 170, 114, 0.14),
+            rgba(199, 170, 114, 0.035) 42%,
+            transparent 72%
+        );
+
+    filter: blur(10px);
+
+    pointer-events: none;
+
+    animation:
+        hero-rolex-glow
+        5s
+        ease-in-out
+        infinite;
+}
+
+.hero-rolex-picture {
+    position: relative;
+    z-index: 2;
+
+    display: block;
+
+    width: min(760px, 100%);
+}
+
+.hero-rolex-image {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    max-height: 650px;
+
+    object-fit: contain;
+
+    object-position: center;
+
+    filter:
+        drop-shadow(
+            0 35px 55px rgba(0, 0, 0, 0.48)
+        );
+
+    transform:
+        translate3d(0, 0, 0);
+
+    animation:
+        hero-rolex-float
+        6s
+        ease-in-out
+        infinite;
+
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+
+/* =========================================
+   HERO ANIMATIONS
+========================================= */
+
+@keyframes hero-text-reveal {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(26px);
+
+        filter: blur(7px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0);
+
+        filter: blur(0);
+    }
+}
+
+@keyframes hero-rolex-reveal {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateX(35px)
+            scale(0.95);
+
+        filter: blur(10px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateX(0)
+            scale(1);
+
+        filter: blur(0);
+    }
+}
+
+@keyframes hero-rolex-float {
+
+    0%,
+    100% {
+        transform:
+            translateY(0)
+            scale(1);
+    }
+
+    50% {
+        transform:
+            translateY(-8px)
+            scale(1.012);
+    }
+}
+
+@keyframes hero-rolex-glow {
+
+    0%,
+    100% {
+        transform: scale(1);
+
+        opacity: 0.72;
+    }
+
+    50% {
+        transform: scale(1.08);
+
+        opacity: 1;
+    }
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+    .hero {
+        min-height: 100svh;
+
+        grid-template-columns: 1fr;
+
+        gap: 0;
+
+        padding:
+            105px
+            24px
+            35px;
+
+        text-align: center;
+    }
+
+    .hero::before {
+        background:
+            linear-gradient(
+                180deg,
+                rgba(8, 8, 8, 0.96) 0%,
+                rgba(8, 8, 8, 0.72) 42%,
+                rgba(8, 8, 8, 0.18) 100%
+            );
+    }
+
+    .hero-content {
+        max-width: 700px;
+
+        margin: 0 auto;
+
+        justify-self: center;
+    }
+
+    .hero-description {
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .hero-button {
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .hero-rolex {
+        width: 100%;
+
+        min-height: 430px;
+
+        margin-top: -10px;
+
+        justify-self: center;
+    }
+
+    .hero-rolex-picture {
+        width: min(720px, 92vw);
+    }
+
+    .hero-rolex-image {
+        max-height: 500px;
+    }
+}
+
+
+/* =========================================
+   PHONE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .hero {
+        min-height: 100svh;
+
+        display: flex;
+        flex-direction: column;
+
+        align-items: center;
+
+        justify-content: flex-start;
+
+        gap: 0;
+
+        padding:
+            96px
+            14px
+            24px;
+
+        text-align: center;
+    }
+
+    .hero-content {
+        width: 100%;
+        max-width: 360px;
+
+        margin: 0 auto;
+
+        flex: 0 0 auto;
+    }
+
+    .hero-label {
+        margin-bottom: 14px;
+
+        font-size: 9px;
+
+        letter-spacing: 0.26em;
+    }
+
+    .hero h1 {
+        max-width: 350px;
+
+        margin: 0 auto;
+
+        font-size:
+            clamp(
+                44px,
+                13.5vw,
+                64px
+            );
+
+        line-height: 0.98;
+    }
+
+    .hero-description {
+        max-width: 330px;
+
+        margin:
+            20px
+            auto
+            0;
+
+        font-size: 13px;
+
+        line-height: 1.65;
+    }
+
+    .hero-button {
+        width: 100%;
+        max-width: 320px;
+
+        margin-top: 25px;
+    }
+
+    .hero-rolex {
+        width: 100%;
+
+        min-height: 0;
+
+        margin-top: 6px;
+
+        justify-content: center;
+
+        flex: 0 0 auto;
+    }
+
+    .hero-rolex-picture {
+        width: min(
+            92vw,
+            430px
+        );
+
+        margin: 0 auto;
+    }
+
+    .hero-rolex-image {
+        width: 100%;
+        height: auto;
+
+        max-height: none;
+
+        object-fit: contain;
+
+        animation:
+            hero-rolex-float-mobile
+            6s
+            ease-in-out
+            infinite;
+    }
+
+    .hero-rolex::before {
+        width: 78vw;
+
+        max-width: 330px;
+    }
+}
+
+@keyframes hero-rolex-float-mobile {
+
+    0%,
+    100% {
+        transform:
+            translateY(0)
+            scale(1);
+    }
+
+    50% {
+        transform:
+            translateY(-6px)
+            scale(1.008);
+    }
+}
