@@ -478,6 +478,8 @@ a {
     object-fit: contain;
     object-position: center;
 
+    padding: 8px;
+
     border-radius: inherit;
 
     transform: scale(1);
