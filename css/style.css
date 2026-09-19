@@ -484,11 +484,11 @@ a {
     object-fit: contain;
     object-position: center;
 
-    padding: 8px;
+    padding: 4px;
 
     border-radius: inherit;
 
-    transform: scale(1);
+    transform: scale(1.08);
 
     transition:
         transform 0.55s cubic-bezier(0.22, 1, 0.36, 1),
@@ -496,7 +496,7 @@ a {
 }
 
 .brand-card:hover .brand-image {
-    transform: scale(1.035);
+    transform: scale(1.12);
 }
 
 
@@ -784,7 +784,13 @@ a {
         object-fit: contain;
         object-position: center;
 
-        padding: 8px;
+        padding: 4px;
+
+        transform: scale(1.08);
+    }
+
+    .brand-card:hover .brand-image {
+        transform: scale(1.08);
     }
 
     .brand-name {
@@ -1410,6 +1416,7 @@ a {
     transform: scale(1.12);
 }
 
+
 /* =========================================
    WATCH PLACEHOLDER
 ========================================= */
@@ -1788,6 +1795,7 @@ a {
         width: 100%;
     }
 }
+
 
 /* =========================================
    HERO — CLEAN FINAL VERSION
