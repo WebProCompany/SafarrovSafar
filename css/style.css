@@ -1389,6 +1389,26 @@ a {
     opacity: 1.2;
 }
 
+.watch-image img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    max-width: 330px;
+    max-height: 390px;
+
+    object-fit: contain;
+    object-position: center;
+
+    transform: scale(1.08);
+
+    transition: transform 0.5s ease;
+}
+
+.watch-card:hover .watch-image img {
+    transform: scale(1.12);
+}
 
 /* =========================================
    WATCH PLACEHOLDER
