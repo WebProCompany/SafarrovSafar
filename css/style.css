@@ -1728,12 +1728,12 @@ a {
     }
 
     .watch-image {
-        min-height: 315px;
+        min-height: 360px;
     }
 
     .watch-placeholder {
-        width: 175px;
-        height: 175px;
+        width: 205px;
+        height: 205px;
 
         font-size: 14px;
     }
@@ -1768,7 +1768,6 @@ a {
         width: 100%;
     }
 }
-
 
 /* =========================================
    HERO — CLEAN FINAL VERSION
