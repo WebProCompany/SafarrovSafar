@@ -806,9 +806,25 @@
     id="about"
 >
 
-    <div class="container">
+    <picture class="about-media">
+        <source
+            media="(max-width: 600px)"
+            srcset="assets/assetsabout-watch-mobile.webp"
+        >
 
-        <div class="section-heading">
+        <img
+            src="assets/assetsabout-watch-desktop.jpg"
+            alt="Премиальные часы на руке"
+            loading="lazy"
+            decoding="async"
+        >
+    </picture>
+
+    <div class="about-overlay"></div>
+
+    <div class="container about-container">
+
+        <div class="about-content">
 
             <p class="section-label">
                 ABOUT
