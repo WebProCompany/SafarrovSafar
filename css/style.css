@@ -860,16 +860,19 @@ a {
 
     z-index: 2;
 
-    display: block;
+    display: block !important;
 
-    width: 100%;
-    height: 100%;
+    width: 100% !important;
+    height: 100% !important;
 
-    max-width: none;
-    max-height: none;
+    max-width: none !important;
+    max-height: none !important;
 
-    object-fit: cover;
-    object-position: center;
+    margin: 0 !important;
+    padding: 0 !important;
+
+    object-fit: cover !important;
+    object-position: center center !important;
 
     transform: scale(1.02);
 
@@ -880,6 +883,7 @@ a {
 .watch-card:hover .watch-image img {
     transform: scale(1.06);
 }
+
 
 /* =========================================
    WATCH BADGE
