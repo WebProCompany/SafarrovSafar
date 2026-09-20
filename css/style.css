@@ -2453,3 +2453,175 @@ a {
     }
 
 }
+
+/* =========================================
+   ABOUT — FULL IMAGE
+========================================= */
+
+.about-section {
+    position: relative;
+
+    min-height: 760px;
+
+    padding: 0;
+
+    overflow: hidden;
+
+    background: #0b0b0b;
+}
+
+.about-media {
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 1;
+
+    display: block;
+
+    width: 100%;
+    height: 100%;
+}
+
+.about-media img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    max-width: none;
+    max-height: none;
+
+    object-fit: cover;
+    object-position: center center;
+
+    transform: scale(1.02);
+
+    transition:
+        transform 1.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.about-section.is-visible .about-media img {
+    transform: scale(1);
+}
+
+
+/* =========================================
+   ABOUT — DARK OVERLAY
+========================================= */
+
+.about-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 2;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(5, 5, 5, 0.86) 0%,
+            rgba(5, 5, 5, 0.68) 32%,
+            rgba(5, 5, 5, 0.32) 68%,
+            rgba(5, 5, 5, 0.48) 100%
+        );
+
+    pointer-events: none;
+}
+
+
+/* =========================================
+   ABOUT — CONTENT
+========================================= */
+
+.about-container {
+    position: relative;
+
+    z-index: 3;
+
+    display: flex;
+
+    min-height: 760px;
+
+    align-items: center;
+}
+
+.about-content {
+    width: 100%;
+    max-width: 620px;
+}
+
+.about-content .section-label {
+    margin-bottom: 18px;
+}
+
+.about-content h2 {
+    max-width: 590px;
+}
+
+.about-content .section-description {
+    max-width: 590px;
+
+    color: #d1cdc5;
+}
+
+
+/* =========================================
+   ABOUT — MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .about-section {
+        min-height: 760px;
+    }
+
+    .about-container {
+        min-height: 760px;
+
+        align-items: flex-end;
+
+        padding-top: 90px;
+        padding-bottom: 70px;
+    }
+
+    .about-content {
+        max-width: 100%;
+    }
+
+    .about-overlay {
+        background:
+            linear-gradient(
+                180deg,
+                rgba(5, 5, 5, 0.48) 0%,
+                rgba(5, 5, 5, 0.38) 26%,
+                rgba(5, 5, 5, 0.76) 62%,
+                rgba(5, 5, 5, 0.94) 100%
+            );
+    }
+
+    .about-media img {
+        object-position: center center;
+    }
+
+    .about-content .section-label {
+        margin-bottom: 14px;
+    }
+
+    .about-content h2 {
+        max-width: 340px;
+
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .about-content .section-description {
+        max-width: 340px;
+
+        margin-left: auto;
+        margin-right: auto;
+
+        font-size: 13px;
+        line-height: 1.7;
+    }
+}
