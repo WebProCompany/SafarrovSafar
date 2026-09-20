@@ -2398,3 +2398,58 @@ a {
             );
     }
 }
+
+/* =========================================
+   ABOUT — ANIMATION
+========================================= */
+
+.about-section .section-label,
+.about-section h2,
+.about-section .section-description {
+    opacity: 0;
+    transform: translateY(24px);
+
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.about-section.is-visible .section-label {
+    opacity: 1;
+    transform: translateY(0);
+
+    transition-delay: 0.10s;
+}
+
+.about-section.is-visible h2 {
+    opacity: 1;
+    transform: translateY(0);
+
+    transition-delay: 0.25s;
+}
+
+.about-section.is-visible .section-description {
+    opacity: 1;
+    transform: translateY(0);
+
+    transition-delay: 0.40s;
+}
+
+
+/* =========================================
+   ABOUT — MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .about-section .section-label,
+    .about-section h2,
+    .about-section .section-description {
+        transform: translateY(18px);
+
+        transition:
+            opacity 0.7s ease,
+            transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+}
