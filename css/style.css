@@ -2825,11 +2825,11 @@ a {
         center center / cover
         no-repeat;
 
-    opacity: 0.22;
+    opacity: 0.42;
 
     filter:
-        brightness(0.52)
-        saturate(0.72);
+        brightness(0.92)
+        saturate(0.85);
 
     transform: scale(1.04);
 }
@@ -2843,9 +2843,9 @@ a {
     background:
         linear-gradient(
             180deg,
-            rgba(5, 5, 5, 0.92) 0%,
-            rgba(5, 5, 5, 0.70) 45%,
-            rgba(5, 5, 5, 0.94) 100%
+            rgba(5, 5, 5, 0.70) 0%,
+            rgba(5, 5, 5, 0.45) 48%,
+            rgba(5, 5, 5, 0.75) 100%
         );
 
     pointer-events: none;
@@ -2878,11 +2878,11 @@ a {
         center center / cover
         no-repeat;
 
-    opacity: 0.18;
+    opacity: 0.38;
 
     filter:
-        brightness(0.48)
-        saturate(0.72);
+        brightness(0.88)
+        saturate(0.84);
 
     transform: scale(1.04);
 }
@@ -2896,9 +2896,9 @@ a {
     background:
         linear-gradient(
             180deg,
-            rgba(5, 5, 5, 0.94) 0%,
-            rgba(5, 5, 5, 0.78) 42%,
-            rgba(5, 5, 5, 0.96) 100%
+            rgba(5, 5, 5, 0.72) 0%,
+            rgba(5, 5, 5, 0.48) 46%,
+            rgba(5, 5, 5, 0.78) 100%
         );
 
     pointer-events: none;
@@ -2931,11 +2931,11 @@ a {
         center center / cover
         no-repeat;
 
-    opacity: 0.16;
+    opacity: 0.36;
 
     filter:
-        brightness(0.44)
-        saturate(0.62);
+        brightness(0.84)
+        saturate(0.76);
 
     transform: scale(1.04);
 }
@@ -2949,167 +2949,9 @@ a {
     background:
         linear-gradient(
             180deg,
-            rgba(5, 5, 5, 0.94) 0%,
-            rgba(5, 5, 5, 0.72) 50%,
-            rgba(5, 5, 5, 0.96) 100%
-        );
-
-    pointer-events: none;
-}
-
-.contact-section > .container {
-    position: relative;
-    z-index: 2;
-}
-
-/* =========================================
-   BRANDS — BACKGROUND
-========================================= */
-
-.brands-section {
-    position: relative;
-    overflow: hidden;
-    background: #0d0d0d;
-}
-
-.brands-section::before {
-    position: absolute;
-    inset: 0;
-    z-index: 0;
-    content: "";
-
-    background:
-        url("https://images.pexels.com/photos/12163561/pexels-photo-12163561.jpeg?cs=srgb&fm=jpg")
-        center center / cover
-        no-repeat;
-
-    opacity: 0.30;
-
-    filter:
-        brightness(0.68)
-        saturate(0.72);
-
-    transform: scale(1.04);
-}
-
-.brands-section::after {
-    position: absolute;
-    inset: 0;
-    z-index: 1;
-    content: "";
-
-    background:
-        linear-gradient(
-            180deg,
-            rgba(5, 5, 5, 0.92) 0%,
-            rgba(5, 5, 5, 0.70) 45%,
-            rgba(5, 5, 5, 0.94) 100%
-        );
-
-    pointer-events: none;
-}
-
-.brands-section > .container {
-    position: relative;
-    z-index: 2;
-}
-
-
-/* =========================================
-   COLLECTION — BACKGROUND
-========================================= */
-
-.watches-section {
-    position: relative;
-    overflow: hidden;
-    background: #0b0b0b;
-}
-
-.watches-section::before {
-    position: absolute;
-    inset: 0;
-    z-index: 0;
-    content: "";
-
-    background:
-        url("https://images.pexels.com/photos/8839887/pexels-photo-8839887.jpeg?cs=srgb&fm=jpg")
-        center center / cover
-        no-repeat;
-
-    opacity: 0.26;
-
-    filter:
-        brightness(0.62)
-        saturate(0.72);
-
-    transform: scale(1.04);
-}
-
-.watches-section::after {
-    position: absolute;
-    inset: 0;
-    z-index: 1;
-    content: "";
-
-    background:
-        linear-gradient(
-            180deg,
-            rgba(5, 5, 5, 0.94) 0%,
-            rgba(5, 5, 5, 0.78) 42%,
-            rgba(5, 5, 5, 0.96) 100%
-        );
-
-    pointer-events: none;
-}
-
-.watches-section > .container {
-    position: relative;
-    z-index: 2;
-}
-
-
-/* =========================================
-   CONTACT — BACKGROUND
-========================================= */
-
-.contact-section {
-    position: relative;
-    overflow: hidden;
-    background: #0b0b0b;
-}
-
-.contact-section::before {
-    position: absolute;
-    inset: 0;
-    z-index: 0;
-    content: "";
-
-    background:
-        url("https://images.pexels.com/photos/26626530/pexels-photo-26626530.jpeg?cs=srgb&fm=jpg")
-        center center / cover
-        no-repeat;
-
-    opacity: 0.23;
-
-    filter:
-        brightness(0.58)
-        saturate(0.62);
-
-    transform: scale(1.04);
-}
-
-.contact-section::after {
-    position: absolute;
-    inset: 0;
-    z-index: 1;
-    content: "";
-
-    background:
-        linear-gradient(
-            180deg,
-            rgba(5, 5, 5, 0.94) 0%,
-            rgba(5, 5, 5, 0.72) 50%,
-            rgba(5, 5, 5, 0.96) 100%
+            rgba(5, 5, 5, 0.74) 0%,
+            rgba(5, 5, 5, 0.50) 50%,
+            rgba(5, 5, 5, 0.80) 100%
         );
 
     pointer-events: none;
